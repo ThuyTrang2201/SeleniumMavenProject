@@ -5,5 +5,7 @@ public class CT_PageURL {
     public static String SELECTOR_HUB_URL = "https://selectorshub.com/xpath-practice-page/";
     public static String AUTOMATIONFC_URL = "https://automationfc.github.io/basic-form/index.html";
     public static String DEMOQA_URL = "https://demoqa.com/automation-practice-form";
+    public static String CODESTART_URL = "https://codestar.vn/khoa-hoc/";
+    public static String GLOBALSQ_URL = "https://www.globalsqa.com/demo-site/select-dropdown-menu/";
 
 }
