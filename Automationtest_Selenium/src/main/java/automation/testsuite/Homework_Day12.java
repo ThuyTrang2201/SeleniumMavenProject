@@ -23,4 +23,6 @@ public class Homework_Day12 extends CommonBase {
         String actualText1 = countrySelect.getFirstSelectedOption().getText();
         assertEquals(actualText1, "Viet Nam");
     }
+    // có thể tìm theo index
+
 }
