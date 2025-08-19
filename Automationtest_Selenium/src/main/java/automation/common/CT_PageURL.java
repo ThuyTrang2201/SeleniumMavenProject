@@ -7,6 +7,6 @@ public class CT_PageURL {
     public static String DEMOQA_URL = "https://demoqa.com/automation-practice-form";
     public static String CODESTART_URL = "https://codestar.vn/khoa-hoc/";
     public static String GLOBALSQ_URL = "https://www.globalsqa.com/demo-site/select-dropdown-menu/";
-    public static String CODESTAR_URL = "https://test-system.crmstar.vn/";
+    public static String CODESTAR_CRM_URL = "https://test-system.crmstar.vn/";
 
 }

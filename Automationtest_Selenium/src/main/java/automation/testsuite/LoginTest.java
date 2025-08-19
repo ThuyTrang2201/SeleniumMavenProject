@@ -5,7 +5,6 @@ import automation.common.CommonBase;
 import automation.pageLocator.LoginPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.*;
 
@@ -56,5 +55,10 @@ public class LoginTest extends CommonBase {
         login.LoginFunction("thuytrang064p@gmail.com", "12345667");
         WebElement Matkhausai = driver.findElement(By.xpath("//p[text()='Mật khẩu sai.']"));
         assertTrue(Matkhausai.isDisplayed());
+    }
+    @AfterMethod
+    public void closeBrowser()
+    {
+        driver.close();
     }
 }

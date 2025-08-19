@@ -33,4 +33,9 @@ public class Day12_HandleCheckbox extends CommonBase {
             System.out.println("Checkbox music has been selected");
         }
     }
+    @AfterMethod
+    public void closeBrowser()
+    {
+        driver.close();
+    }
 }
