@@ -15,6 +15,8 @@ import java.time.Duration;
 public class ALADA_ChangePassword_Factory {
     private WebDriver driver;
 
+
+
     // Login
     @FindBy(id="txtLoginUsername") WebElement textEmail;
     @FindBy(id="txtLoginPassword") WebElement textPassword;
@@ -26,6 +28,8 @@ public class ALADA_ChangePassword_Factory {
     @FindBy(id = "txtnewpass") WebElement textNewpass;
     @FindBy(id = "txtrenewpass") WebElement textRenewpass;
     @FindBy(xpath = "//button[text()='Lưu mật khẩu mới']") WebElement buttonSave;
+    // Logout
+    @FindBy(xpath = "//a[text()='Thoát']") WebElement buttonLogout;
 
     public ALADA_ChangePassword_Factory(WebDriver driver) {
         this.driver = driver;
@@ -38,7 +42,7 @@ public class ALADA_ChangePassword_Factory {
         textPassword.sendKeys(pass);
         buttonLogin.click();
     }
-    public void hoverAvatar()
+    public void hoverAvatarLogin()
     {
         Actions actions = new Actions(driver);
         actions.moveToElement(imageAvatar).perform();
@@ -60,6 +64,8 @@ public class ALADA_ChangePassword_Factory {
         wait.until(ExpectedConditions.alertIsPresent());
         Alert alert = driver.switchTo().alert();
         alert.accept();
+        imageAvatar.click();
+        buttonLogout.click();
     }
 
 }

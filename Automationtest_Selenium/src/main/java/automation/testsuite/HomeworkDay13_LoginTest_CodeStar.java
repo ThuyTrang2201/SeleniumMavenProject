@@ -1,7 +1,8 @@
 package automation.testsuite;
 
-import automation.common.CT_PageURL;
+
 import automation.common.CommonBase;
+import automation.constant.CT_PageURL;
 import automation.pageLocator.LoginPage_CodeStar;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

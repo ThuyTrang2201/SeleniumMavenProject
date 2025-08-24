@@ -1,14 +1,12 @@
 package automation.testsuite;
 
-import automation.common.CT_PageURL;
 import automation.common.CommonBase;
+import automation.constant.CT_PageURL;
 import automation.pageLocator.LoginPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.*;
-
-import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 public class LoginTest extends CommonBase {

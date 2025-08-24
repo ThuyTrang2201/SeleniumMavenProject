@@ -1,7 +1,7 @@
 package automation.testsuite;
 
-import automation.common.CT_PageURL;
 import automation.common.CommonBase;
+import automation.constant.CT_PageURL;
 import automation.pageLocator.ALADA_ChangePassword_Factory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -30,8 +30,9 @@ public class ALADA_ChangePassword_Test extends CommonBase {
     {
         loginSuccess();
         ALADA_ChangePassword_Factory factory = new ALADA_ChangePassword_Factory(driver);
-        factory.hoverAvatar();
+        factory.hoverAvatarLogin();
         factory.editPassFunction("test1234","123456","123456");
-        assertEquals(driver.getCurrentUrl(),"https://alada.vn/thong-tin-ca-nhan");
+        assertEquals(driver.getCurrentUrl(),"https://alada.vn/");
+
     }
 }
