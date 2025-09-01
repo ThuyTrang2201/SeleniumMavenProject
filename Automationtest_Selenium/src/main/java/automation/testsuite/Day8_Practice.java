@@ -35,4 +35,9 @@ public class Day8_Practice extends CommonBase {
         WebElement textCourse = driver.findElement(By.partialLinkText("A course with complex scenarios"));
         System.out.println("textCourse:" + textCourse);
     }
+    @AfterMethod
+    public void closeDriver()
+    {
+            driver.close();
+    }
 }

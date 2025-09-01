@@ -25,5 +25,9 @@ public class Homework_Day12 extends CommonBase {
         assertEquals(actualText1, "Viet Nam");
     }
     // có thể tìm theo index
-
+    @AfterMethod
+    public void closeDriver()
+    {
+            driver.close();
+    }
 }

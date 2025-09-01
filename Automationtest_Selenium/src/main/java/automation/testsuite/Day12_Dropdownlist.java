@@ -38,4 +38,10 @@ public class Day12_Dropdownlist extends CommonBase {
         String actualText3 = catgSelect.getFirstSelectedOption().getText();
         assertEquals(actualText3, "Programming courses");
     }
+    @AfterMethod
+    public void closeDriver()
+    {
+            driver.close();
+    }
 }
+

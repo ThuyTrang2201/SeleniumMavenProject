@@ -5,6 +5,7 @@ import automation.constant.CT_PageURL;
 import automation.pageLocator.ALADA_LoginPage_Factory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -33,6 +34,12 @@ public class ALADA_LoginLogoutTest extends CommonBase {
         ALADA_LoginPage_Factory factory = new ALADA_LoginPage_Factory(driver);
         factory.logoutFunction();
         assertTrue(driver.findElement(By.xpath("//div[@class='login']")).isDisplayed());
+    }
+
+    @AfterMethod
+    public void closeDriver()
+    {
+            driver.close();
     }
 }
 

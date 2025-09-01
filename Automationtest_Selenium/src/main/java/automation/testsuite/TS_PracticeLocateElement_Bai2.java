@@ -1,6 +1,5 @@
 package automation.testsuite;
 
-
 import automation.common.CommonBase;
 import automation.constant.CT_PageURL;
 import org.openqa.selenium.By;

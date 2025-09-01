@@ -38,5 +38,9 @@ public class TS_PracticeLocateElement_Bai1 extends CommonBase {
         WebElement mobile_numberElement= driver.findElement(By.name("mobile number"));
         System.out.println("mobile_numberElement:" + mobile_numberElement);
     }
-
+    @AfterMethod
+    public void closeDriver()
+    {
+            driver.close();
+    }
 }
