@@ -57,5 +57,5 @@ public class BTVNDay16_CRMStar_AddandDeleteKVLV_Test extends CommonBase {
         Thread.sleep(3000);
 
     }
-
+//td[text()='newHanoi1']/following-sibling::td[text()='Hanoi1']/following-sibling::td/a[normalize-space()='Xóa']
 }

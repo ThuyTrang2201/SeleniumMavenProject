@@ -19,7 +19,7 @@ public class CommonBase {
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\driver\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get(Url);
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         driver.manage().window().fullscreen();
         return driver;
     }
@@ -84,6 +84,16 @@ public class CommonBase {
         WebElement element = getElementPresentDOM(locator);
         element.click();
     }
+
+    public void clickByJS(By locator)
+    {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement element = driver.findElement(locator);
+        js.executeScript("arguments[0].click();", element);
+    }
+
+
+
     // Wrap phuong thuc type
     public void type (By locator, String value)
     {
