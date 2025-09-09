@@ -5,17 +5,18 @@ import automation.constant.CT_PageURL;
 import automation.pageLocator.ALADA_LoginPage_Factory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import static org.testng.Assert.assertTrue;
 
 public class ALADA_LoginLogoutTest extends CommonBase {
     @BeforeMethod
-    public void openBrowser()
+    @Parameters("browser")
+    public void openBrowser(@Optional("Chrome") String browser)
     {
-        driver = initFireFoxDriver(CT_PageURL.ALADA_URL);
+        driver = setupDriver(browser);
+        driver.get(CT_PageURL.ALADA_URL);
+//        driver = initFireFoxDriver(CT_PageURL.ALADA_URL);
     }
 
     @Test
@@ -34,12 +35,6 @@ public class ALADA_LoginLogoutTest extends CommonBase {
         ALADA_LoginPage_Factory factory = new ALADA_LoginPage_Factory(driver);
         factory.logoutFunction();
         assertTrue(driver.findElement(By.xpath("//div[@class='login']")).isDisplayed());
-    }
-
-    @AfterMethod
-    public void closeDriver()
-    {
-            driver.close();
     }
 }
 

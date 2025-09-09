@@ -36,6 +36,5 @@ public class ALADA_LoginPage_Factory {
 //        driver.switchTo().alert().accept();
         imageAvatar.click();
         btnThoat.click();
-
     }
 }
